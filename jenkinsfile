@@ -1,0 +1,11 @@
+/* Requires the Docker Pipeline plugin */
+pipeline {
+    agent { docker { image 'juanpabloinformatica/hellopython:latest' } }
+    stages {
+        stage('build') {
+            steps {
+                sh 'python --version'
+            }
+        }
+    }
+}

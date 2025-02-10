@@ -1,0 +1,7 @@
+services:
+  jenkins:
+    build: .
+    container_name: pythonhellocontainer
+    image: pythonhello:latest
+    ports:
+      - "4567:4567"
